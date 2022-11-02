@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>k8s on Story of Jr. Backend/DevOps Developer</title>
+    <link>https://kangdroid.github.io/en/tags/k8s/</link>
+    <description>Recent content in k8s on Story of Jr. Backend/DevOps Developer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 02 Nov 2022 22:33:19 +0900</lastBuildDate>
+    
+	<atom:link href="https://kangdroid.github.io/en/tags/k8s/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>1. Create Kubernetes(K3s) Cluster across different network configurations - Intro</title>
+      <link>https://kangdroid.github.io/en/article/kubernetes-cluster-on-different-network/1-project-start/</link>
+      <pubDate>Wed, 02 Nov 2022 22:33:19 +0900</pubDate>
+      
+      <guid>https://kangdroid.github.io/en/article/kubernetes-cluster-on-different-network/1-project-start/</guid>
+      <description>Brief intro of this project.</description>
+    </item>
+    
+  </channel>
+</rss>

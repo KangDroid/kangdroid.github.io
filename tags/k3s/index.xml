@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>k3s on 주니어 백엔드/DevOps의 우당탕탕 스토리</title>
+    <link>https://kangdroid.github.io/tags/k3s/</link>
+    <description>Recent content in k3s on 주니어 백엔드/DevOps의 우당탕탕 스토리</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 02 Nov 2022 22:33:19 +0900</lastBuildDate>
+    
+	<atom:link href="https://kangdroid.github.io/tags/k3s/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>1. 여러 네트워크에 있는 노드를 연결해서 Kubernetes(K3S) 클러스터 구축하기 - 소개편</title>
+      <link>https://kangdroid.github.io/article/kubernetes-cluster-on-different-network/1-project-start/</link>
+      <pubDate>Wed, 02 Nov 2022 22:33:19 +0900</pubDate>
+      
+      <guid>https://kangdroid.github.io/article/kubernetes-cluster-on-different-network/1-project-start/</guid>
+      <description>간단한 프로젝트 설명 &amp;amp; 제약 사항</description>
+    </item>
+    
+  </channel>
+</rss>

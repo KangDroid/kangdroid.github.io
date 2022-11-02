@@ -3,18 +3,143 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://kangdroid.github.io/page/about-me/</loc>
-    <lastmod>2022-11-02T19:22:42+09:00</lastmod>
+    <loc>https://kangdroid.github.io/article/kubernetes-cluster-on-different-network/1-project-start/</loc>
+    <lastmod>2022-11-02T22:33:19+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://kangdroid.github.io/en/article/kubernetes-cluster-on-different-network/1-project-start/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://kangdroid.github.io/article/kubernetes-cluster-on-different-network/1-project-start/"
+                />
   </url>
   
   <url>
-    <loc>https://kangdroid.github.io/page/</loc>
-    <lastmod>2022-11-02T19:22:42+09:00</lastmod>
+    <loc>https://kangdroid.github.io/article/</loc>
+    <lastmod>2022-11-02T22:33:19+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://kangdroid.github.io/en/article/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://kangdroid.github.io/article/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://kangdroid.github.io/categories/</loc>
+    <lastmod>2022-11-02T22:33:19+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://kangdroid.github.io/en/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://kangdroid.github.io/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://kangdroid.github.io/tags/k3s/</loc>
+    <lastmod>2022-11-02T22:33:19+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://kangdroid.github.io/en/tags/k3s/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://kangdroid.github.io/tags/k3s/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://kangdroid.github.io/categories/k3s-cluster-accross-multiple-network/</loc>
+    <lastmod>2022-11-02T22:33:19+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://kangdroid.github.io/en/categories/k3s-cluster-accross-multiple-network/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://kangdroid.github.io/categories/k3s-cluster-accross-multiple-network/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://kangdroid.github.io/tags/k8s/</loc>
+    <lastmod>2022-11-02T22:33:19+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://kangdroid.github.io/en/tags/k8s/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://kangdroid.github.io/tags/k8s/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://kangdroid.github.io/tags/kubernetes/</loc>
+    <lastmod>2022-11-02T22:33:19+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://kangdroid.github.io/en/tags/kubernetes/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://kangdroid.github.io/tags/kubernetes/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://kangdroid.github.io/tags/multiregion/</loc>
+    <lastmod>2022-11-02T22:33:19+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://kangdroid.github.io/en/tags/multiregion/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://kangdroid.github.io/tags/multiregion/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://kangdroid.github.io/tags/</loc>
+    <lastmod>2022-11-02T22:33:19+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://kangdroid.github.io/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://kangdroid.github.io/tags/"
+                />
   </url>
   
   <url>
     <loc>https://kangdroid.github.io/</loc>
-    <lastmod>2022-11-02T19:22:42+09:00</lastmod>
+    <lastmod>2022-11-02T22:33:19+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -28,23 +153,13 @@
   </url>
   
   <url>
-    <loc>https://kangdroid.github.io/article/</loc>
-    <lastmod>2022-10-20T00:00:00+09:00</lastmod>
+    <loc>https://kangdroid.github.io/page/about-me/</loc>
+    <lastmod>2022-11-02T19:22:42+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kangdroid.github.io/categories/</loc>
-    <lastmod>2022-10-20T00:00:00+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://kangdroid.github.io/en/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://kangdroid.github.io/categories/"
-                />
+    <loc>https://kangdroid.github.io/page/</loc>
+    <lastmod>2022-11-02T19:22:42+09:00</lastmod>
   </url>
   
   <url>
@@ -75,21 +190,6 @@
   <url>
     <loc>https://kangdroid.github.io/categories/mongodb-apac-2022-seoul/</loc>
     <lastmod>2022-10-20T00:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kangdroid.github.io/tags/</loc>
-    <lastmod>2022-10-20T00:00:00+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://kangdroid.github.io/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://kangdroid.github.io/tags/"
-                />
   </url>
   
   <url>

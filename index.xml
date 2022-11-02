@@ -4,10 +4,19 @@
     <link>https://kangdroid.github.io/</link>
     <description>Recent content on 주니어 백엔드/DevOps의 우당탕탕 스토리</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 02 Nov 2022 19:22:42 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 02 Nov 2022 22:33:19 +0900</lastBuildDate>
     
         <atom:link href="https://kangdroid.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>1. 여러 네트워크에 있는 노드를 연결해서 Kubernetes(K3S) 클러스터 구축하기 - 소개편</title>
+      <link>https://kangdroid.github.io/article/kubernetes-cluster-on-different-network/1-project-start/</link>
+      <pubDate>Wed, 02 Nov 2022 22:33:19 +0900</pubDate>
+      
+      <guid>https://kangdroid.github.io/article/kubernetes-cluster-on-different-network/1-project-start/</guid>
+      <description>간단한 프로젝트 설명 &amp;amp; 제약 사항</description>
+    </item>
     
     <item>
       <title>Mongodb Apac 2022 - MongoDB Developer Data Platform</title>

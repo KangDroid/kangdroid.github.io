@@ -3,21 +3,38 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://kangdroid.github.io/en/author/</loc>
+    <loc>https://kangdroid.github.io/en/article/kubernetes-cluster-on-different-network/1-project-start/</loc>
+    <lastmod>2022-11-02T22:33:19+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://kangdroid.github.io/author/"
+                href="https://kangdroid.github.io/article/kubernetes-cluster-on-different-network/1-project-start/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://kangdroid.github.io/en/author/"
+                href="https://kangdroid.github.io/en/article/kubernetes-cluster-on-different-network/1-project-start/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://kangdroid.github.io/en/article/</loc>
+    <lastmod>2022-11-02T22:33:19+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://kangdroid.github.io/article/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://kangdroid.github.io/en/article/"
                 />
   </url>
   
   <url>
     <loc>https://kangdroid.github.io/en/categories/</loc>
+    <lastmod>2022-11-02T22:33:19+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
@@ -31,21 +48,83 @@
   </url>
   
   <url>
-    <loc>https://kangdroid.github.io/en/series/</loc>
+    <loc>https://kangdroid.github.io/en/tags/k3s/</loc>
+    <lastmod>2022-11-02T22:33:19+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://kangdroid.github.io/series/"
+                href="https://kangdroid.github.io/tags/k3s/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://kangdroid.github.io/en/series/"
+                href="https://kangdroid.github.io/en/tags/k3s/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://kangdroid.github.io/en/categories/k3s-cluster-accross-multiple-network/</loc>
+    <lastmod>2022-11-02T22:33:19+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://kangdroid.github.io/categories/k3s-cluster-accross-multiple-network/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://kangdroid.github.io/en/categories/k3s-cluster-accross-multiple-network/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://kangdroid.github.io/en/tags/k8s/</loc>
+    <lastmod>2022-11-02T22:33:19+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://kangdroid.github.io/tags/k8s/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://kangdroid.github.io/en/tags/k8s/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://kangdroid.github.io/en/tags/kubernetes/</loc>
+    <lastmod>2022-11-02T22:33:19+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://kangdroid.github.io/tags/kubernetes/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://kangdroid.github.io/en/tags/kubernetes/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://kangdroid.github.io/en/tags/multiregion/</loc>
+    <lastmod>2022-11-02T22:33:19+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://kangdroid.github.io/tags/multiregion/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://kangdroid.github.io/en/tags/multiregion/"
                 />
   </url>
   
   <url>
     <loc>https://kangdroid.github.io/en/</loc>
+    <lastmod>2022-11-02T22:33:19+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
@@ -60,6 +139,7 @@
   
   <url>
     <loc>https://kangdroid.github.io/en/tags/</loc>
+    <lastmod>2022-11-02T22:33:19+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
@@ -69,6 +149,34 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://kangdroid.github.io/en/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://kangdroid.github.io/en/author/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://kangdroid.github.io/author/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://kangdroid.github.io/en/author/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://kangdroid.github.io/en/series/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://kangdroid.github.io/series/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://kangdroid.github.io/en/series/"
                 />
   </url>
   
