@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
   <url>
     <loc>https://kangdroid.github.io/author/</loc>
     <xhtml:link
@@ -13,7 +14,9 @@
                 hreflang="en"
                 href="https://kangdroid.github.io/author/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://kangdroid.github.io/categories/</loc>
     <xhtml:link
                 rel="alternate"
@@ -25,7 +28,9 @@
                 hreflang="en"
                 href="https://kangdroid.github.io/categories/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://kangdroid.github.io/series/</loc>
     <xhtml:link
                 rel="alternate"
@@ -37,7 +42,9 @@
                 hreflang="en"
                 href="https://kangdroid.github.io/series/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://kangdroid.github.io/</loc>
     <xhtml:link
                 rel="alternate"
@@ -49,7 +56,9 @@
                 hreflang="en"
                 href="https://kangdroid.github.io/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://kangdroid.github.io/tags/</loc>
     <xhtml:link
                 rel="alternate"
@@ -62,4 +71,5 @@
                 href="https://kangdroid.github.io/tags/"
                 />
   </url>
+  
 </urlset>

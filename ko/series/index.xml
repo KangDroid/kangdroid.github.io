@@ -4,6 +4,10 @@
     <title>Series on 주니어 백엔드/DevOps의 우당탕탕 스토리</title>
     <link>https://kangdroid.github.io/ko/series/</link>
     <description>Recent content in Series on 주니어 백엔드/DevOps의 우당탕탕 스토리</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://kangdroid.github.io/ko/series/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="https://kangdroid.github.io/ko/series/index.xml" rel="self" type="application/rss+xml" />
+    
+    
   </channel>
 </rss>
