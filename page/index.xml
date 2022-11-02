@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on 주니어 백엔드/DevOps의 우당탕탕 스토리</title>
+    <link>https://kangdroid.github.io/page/</link>
+    <description>Recent content in Pages on 주니어 백엔드/DevOps의 우당탕탕 스토리</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 02 Nov 2022 19:22:42 +0900</lastBuildDate>
+    
+	<atom:link href="https://kangdroid.github.io/page/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About Me</title>
+      <link>https://kangdroid.github.io/page/about-me/</link>
+      <pubDate>Wed, 02 Nov 2022 19:22:42 +0900</pubDate>
+      
+      <guid>https://kangdroid.github.io/page/about-me/</guid>
+      <description>안녕하세요! 필요한 것을 찾아 꾸준하게 공부하고, 문제를 해결하고자 하는 개발자 KangDroid 입니다.
+이 블로그는요! 이 블로그는 제 개인적인 이야기들을 두서 없이 마음대로 담아두는 하나의 저장소 입니다. 개인적인 의견과, 이야기인 만큼 특정 단체를 대표하거나 대변하지 않습니다!
+주로 제 주 분야인 백엔드, DevOps와 관련된 글이 많이 올라올 예정입니다 :)</description>
+    </item>
+    
+  </channel>
+</rss>

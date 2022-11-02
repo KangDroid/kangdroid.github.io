@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>conference on 주니어 백엔드/DevOps의 우당탕탕 스토리</title>
+    <link>https://kangdroid.github.io/tags/conference/</link>
+    <description>Recent content in conference on 주니어 백엔드/DevOps의 우당탕탕 스토리</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 20 Oct 2022 00:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://kangdroid.github.io/tags/conference/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mongodb Apac 2022 - MongoDB Developer Data Platform</title>
+      <link>https://kangdroid.github.io/article/mongodb-apac-2022/1-mongodb-data-platform/</link>
+      <pubDate>Thu, 20 Oct 2022 00:00:00 +0900</pubDate>
+      
+      <guid>https://kangdroid.github.io/article/mongodb-apac-2022/1-mongodb-data-platform/</guid>
+      <description>첫 번째 MongoDB 세션 정리 &amp;amp; 회고(MongoDB Developer Data Platform)</description>
+    </item>
+    
+  </channel>
+</rss>
