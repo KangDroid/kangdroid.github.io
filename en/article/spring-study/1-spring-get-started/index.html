@@ -15,17 +15,18 @@
     <title>
         
            
-               Articles &vert; Story of Jr. Backend/DevOps Developer
+               1. Get Start with Spring: Create SpringBoot project using Spring Initializr. &vert; Story of Jr. Backend/DevOps Developer
            
         
     </title>
-    <meta itemprop="name" content="Articles">
-    <meta itemprop="description" content="Articles - Story of Jr. Backend/DevOps Developer">
-    <meta property="og:title" content="Articles">
-    <meta property="og:description" content="Articles - Story of Jr. Backend/DevOps Developer">
+    <meta itemprop="name" content="1. Get Start with Spring: Create SpringBoot project using Spring Initializr.">
+    <meta itemprop="description" content="1. Get Start with Spring: Create SpringBoot project using Spring Initializr. - Story of Jr. Backend/DevOps Developer">
+    <meta property="og:title" content="1. Get Start with Spring: Create SpringBoot project using Spring Initializr.">
+    <meta property="og:description" content="1. Get Start with Spring: Create SpringBoot project using Spring Initializr. - Story of Jr. Backend/DevOps Developer">
     <meta property="og:image" content="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?size=200">
-    <meta property="og:url" content="https://kangdroid.github.io/en/article/">
-    <meta property="og:site_name" content="Story of Jr. Backend/DevOps Developer"><meta property="og:type" content="website">
+    <meta property="og:url" content="https://kangdroid.github.io/en/article/spring-study/1-spring-get-started/">
+    <meta property="og:site_name" content="Story of Jr. Backend/DevOps Developer">
+    <meta property="og:type" content="article">
 
     
 
@@ -33,12 +34,12 @@
     <script src="/modernizr-simple.js"></script>
 
     
-    <link href="/en/article/" rel="alternate" type="application/rss+xml" title="Story of Jr. Backend/DevOps Developer" />
-    <link href="/en/article/" rel="feed" type="application/rss+xml" title="Story of Jr. Backend/DevOps Developer" />
+    <link href="/en/article/spring-study/1-spring-get-started/" rel="alternate" type="application/rss+xml" title="Story of Jr. Backend/DevOps Developer" />
+    <link href="/en/article/spring-study/1-spring-get-started/" rel="feed" type="application/rss+xml" title="Story of Jr. Backend/DevOps Developer" />
     
 
     
-    <link rel="canonical" href="https://kangdroid.github.io/en/article/">
+    <link rel="canonical" href="https://kangdroid.github.io/en/article/spring-study/1-spring-get-started/">
     
 
     <link rel="stylesheet" href="https://kangdroid.github.io/theme.css">
@@ -118,11 +119,9 @@
 
     <div class="main container">
         
-    
-    
-        <div class="article-wrapper u-cf">
-            
-                <a class="bubble" href="https://kangdroid.github.io/en/article/spring-study/1-spring-get-started/">
+    <div class="article-wrapper u-cf single">
+        
+            <a class="bubble" href="https://kangdroid.github.io/en/article/spring-study/1-spring-get-started/">
     <i class="fas fa-fw fa-pencil-alt"></i>
 </a>
 
@@ -160,9 +159,75 @@
     </div>
 
     
-        Create SpringBoot project via Spring Initializr and IntelliJ IDEA.
-
         
+
+        <h2 id="intro">Intro</h2>
+<p>This blog article aims to summarize or organize information that I&rsquo;ve learned from <a href="https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%9E%85%EB%AC%B8-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8">Inflearn Lecture</a></p>
+<p>Lecture does explain about SpringBoot using JAVA, but I am trying to organize information with my knowledge, especially comparing with ASP.NET Core(since ASP.NET Core is framework that I&rsquo;m really familiar of.) and using Kotlin.</p>
+<h2 id="main-key-points-of-article">Main Key Points of Article</h2>
+<ul>
+<li>Create SpringBoot Project using start.spring.io</li>
+<li>Create SpringBoot Project using IntelliJ IDEA(Ultimate probably)</li>
+</ul>
+<h2 id="some-common-configuration-when-creating-projects">Some common configuration when creating projects.</h2>
+<ul>
+<li>Use Kotlin Gradle DSL</li>
+<li>Use Kotlin</li>
+<li>Use SpringBoot 3.0.1</li>
+<li>Use those dependencies
+<ul>
+<li>Spring Web</li>
+<li>Thymeleaf</li>
+</ul>
+</li>
+<li>Other metadata fields may vary depends on your customization.</li>
+</ul>
+<h2 id="create-spring-boot-project-using-spring-initializr">Create Spring Boot Project using Spring Initializr</h2>
+<h3 id="overall-flow">Overall Flow</h3>
+<ol>
+<li>Goto start.spring.io</li>
+<li>Configure some fields, referencing <code>Some common configuration when creating projects</code> section.</li>
+<li>Create Project &amp;&amp; Download Project</li>
+<li>Open with IntelliJ IDEA &amp; Execute Project.</li>
+</ol>
+<h3 id="1-go-to-startspringio">1. Go to start.spring.io</h3>
+<p>You can see some kind of web page just like screenshot below.
+<img src="/resources/spring-study/1_get_started/spring_init.png" alt=""></p>
+<h3 id="2-configure-project-settings">2. Configure Project settings</h3>
+<p>Fill up project settings, referencing screenshot below &amp; <code>Some common configuration when creating projects</code> section.
+<img src="/resources/spring-study/1_get_started/spring_init_two.png" alt=""></p>
+<h3 id="3-create-project--download-project">3. Create Project &amp;&amp; Download Project</h3>
+<p>Download project files by clicking <code>Generate</code> button below. After download &amp; extracting project files, you may see some kind of folder structure just like screenshot below.
+<img src="/resources/spring-study/1_get_started/project_structure.png" alt=""></p>
+<h3 id="4-open-with-intellij-idea">4. Open with IntelliJ IDEA</h3>
+<p>Open project with IntelliJ IDEA, and you may see IntelliJ IDEA will start to initiate some project work(like downloading dependencies, indexing, etc.)
+<img src="/resources/spring-study/1_get_started/intellij_idea_open.png" alt=""></p>
+<h3 id="5-build--run-project">5. Build &amp; Run Project.</h3>
+<p>(The writer, Jason actually uses New UI feature from Jetbrain, so IDE&rsquo;s UI Layout may vary from yours.)</p>
+<p>Project will be built and being run if you click &ldquo;Run(the play logo)&rdquo;. The screenshot below is what it looks like when I run the project.
+<img src="/resources/spring-study/1_get_started/project_run.png" alt=""></p>
+<h2 id="create-springboot-project-using-intellij-ideaultimate-probably">Create SpringBoot Project using IntelliJ IDEA(Ultimate probably)</h2>
+<p>SpringBoot project can be created using IntelliJ IDEA itself. This section explains about how to create SpringBoot project using IntelliJ IDEA.</p>
+<h3 id="overall-flow-1">Overall Flow</h3>
+<ol>
+<li>Click <code>New Project</code> from IDEA</li>
+<li>Select <code>Spring Initialzr</code> generator, and configure project settings.</li>
+<li>Define dependencies</li>
+<li>Run Project.</li>
+</ol>
+<h3 id="1-click-new-project-from-idea">1. Click <code>New Project</code> from IDEA</h3>
+<p>You may see screen like screenshot below when you click <code>New Project</code>.
+<img src="/resources/spring-study/1_get_started/new_project_before.png" alt=""></p>
+<h3 id="2-select-spring-initialzr-generator-and-configure-project-settings">2. Select <code>Spring Initialzr</code> generator, and configure project settings.</h3>
+<p>You may find out <code>Spring Initializr</code> from left sidebar of window. After selecting generator, you may configure project settings just like above.
+<img src="/resources/spring-study/1_get_started/project_settings.png" alt=""></p>
+<h3 id="3-define-dependencies">3. Define dependencies</h3>
+<p>You may configure project&rsquo;s dependencies just like screenshot below. After setting up dependencies, click <code>Create</code> button to create project &amp; open up.
+<img src="/resources/spring-study/1_get_started/project_settings.png" alt=""></p>
+<h3 id="4-run-project">4. Run Project.</h3>
+<p>Running project is just same as when we use Spring Initializr.(See picture below.)
+<img src="/resources/spring-study/1_get_started/run_project_init.png" alt=""></p>
+
     
 </div>
 
@@ -203,114 +268,20 @@
 
 </article>
 
-            
-        </div>
-    
-        <div class="article-wrapper u-cf">
-            
-                <a class="bubble" href="https://kangdroid.github.io/en/article/kubernetes-cluster-on-different-network/1-project-start/">
-    <i class="fas fa-fw fa-pencil-alt"></i>
-</a>
-
-<article class="default article">
-    
-
-    <div class="content">
-    <h1 class="article-title">
-        <a href="https://kangdroid.github.io/en/article/kubernetes-cluster-on-different-network/1-project-start/">
-            1. Create Kubernetes(K3s) Cluster across different network configurations - Intro
-        </a>
-    </h1>
-
-    <div class="meta">
-        
-            
-                <span class="date moment">2022-11-02</span>
-            
-        
-
-        
-
-        
-            <span class="categories">
-                
-                    
-                    
-                        <a href="https://kangdroid.github.io/en/categories/k3s-cluster-accross-multiple-network/">K3s cluster accross multiple network</a>
-                    
-                
-            </span>
-        
-
         
     </div>
 
     
-        Brief intro of this project.
-
-        
-    
-</div>
-
-    
-<div class="footer">
-
-
-    
-        <div class="tags">
-            <i class="fa fa-tags"></i>
-            <div class="links">
-                
-                    
-                    
-                    <a href="https://kangdroid.github.io/en/tags/kubernetes/">kubernetes</a>
-                    
-                
-                    
-                    
-                    <a href="https://kangdroid.github.io/en/tags/k8s/">k8s</a>
-                    
-                
-                    
-                    
-                    <a href="https://kangdroid.github.io/en/tags/k3s/">k3s</a>
-                    
-                
-                    
-                    
-                    <a href="https://kangdroid.github.io/en/tags/multiregion/">multiregion</a>
-                    
-                
-            </div>
-        </div>
-    
-
-    
-    <div class="languages">
-        <i class="fa fa-language"></i>
-        <div class="links">
+        <div id="comments-container">
             
-                <a href="https://kangdroid.github.io/article/kubernetes-cluster-on-different-network/1-project-start/">ko</a>
             
-        </div>
-    </div>
-    
-</div>
-
-</article>
 
             
+
+            
+
         </div>
     
-
-    
-    <div class="paginator">
-        
-
-        
-    </div>
-
-
 
     </div>
 
@@ -398,8 +369,7 @@
                 
                 by Jason HyunWoo Kang(KangDroid)
             </a>
-            -
-            <a href="https://kangdroid.github.io/en/article/index.xml">RSS</a>
+            
         </div>
         <div class="author">
             <a href="https://github.com/Lednerb/bilberry-hugo-theme"

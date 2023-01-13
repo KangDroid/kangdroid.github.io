@@ -5,7 +5,16 @@
     <link>https://kangdroid.github.io/en/article/</link>
     <description>Recent content in Articles on Story of Jr. Backend/DevOps Developer</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 02 Nov 2022 22:33:19 +0900</lastBuildDate><atom:link href="https://kangdroid.github.io/en/article/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 13 Jan 2023 19:00:00 +0900</lastBuildDate><atom:link href="https://kangdroid.github.io/en/article/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1. Get Start with Spring: Create SpringBoot project using Spring Initializr.</title>
+      <link>https://kangdroid.github.io/en/article/spring-study/1-spring-get-started/</link>
+      <pubDate>Fri, 13 Jan 2023 19:00:00 +0900</pubDate>
+      
+      <guid>https://kangdroid.github.io/en/article/spring-study/1-spring-get-started/</guid>
+      <description>Create SpringBoot project via Spring Initializr and IntelliJ IDEA.</description>
+    </item>
+    
     <item>
       <title>1. Create Kubernetes(K3s) Cluster across different network configurations - Intro</title>
       <link>https://kangdroid.github.io/en/article/kubernetes-cluster-on-different-network/1-project-start/</link>

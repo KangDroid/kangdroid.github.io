@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>spring-study on Story of Jr. Backend/DevOps Developer</title>
+    <link>https://kangdroid.github.io/en/categories/spring-study/</link>
+    <description>Recent content in spring-study on Story of Jr. Backend/DevOps Developer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 13 Jan 2023 19:00:00 +0900</lastBuildDate><atom:link href="https://kangdroid.github.io/en/categories/spring-study/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1. Get Start with Spring: Create SpringBoot project using Spring Initializr.</title>
+      <link>https://kangdroid.github.io/en/article/spring-study/1-spring-get-started/</link>
+      <pubDate>Fri, 13 Jan 2023 19:00:00 +0900</pubDate>
+      
+      <guid>https://kangdroid.github.io/en/article/spring-study/1-spring-get-started/</guid>
+      <description>Create SpringBoot project via Spring Initializr and IntelliJ IDEA.</description>
+    </item>
+    
+  </channel>
+</rss>
