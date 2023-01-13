@@ -4,6 +4,16 @@
   <url>
     <loc>https://kangdroid.github.io/article/spring-study/3-spring-api-controller/</loc>
     <lastmod>2023-01-13T21:00:00+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://kangdroid.github.io/en/article/spring-study/3-spring-api-controller/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://kangdroid.github.io/article/spring-study/3-spring-api-controller/"
+                />
   </url><url>
     <loc>https://kangdroid.github.io/article/</loc>
     <lastmod>2023-01-13T21:00:00+09:00</lastmod>
@@ -98,6 +108,16 @@
   </url><url>
     <loc>https://kangdroid.github.io/article/spring-study/2-spring-view-templates/</loc>
     <lastmod>2023-01-13T20:00:00+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://kangdroid.github.io/en/article/spring-study/2-spring-view-templates/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://kangdroid.github.io/article/spring-study/2-spring-view-templates/"
+                />
   </url><url>
     <loc>https://kangdroid.github.io/article/spring-study/1-spring-get-started/</loc>
     <lastmod>2023-01-13T19:00:00+09:00</lastmod>

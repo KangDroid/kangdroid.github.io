@@ -15,17 +15,18 @@
     <title>
         
            
-               Story of Jr. Backend/DevOps Developer. &vert; Story of Jr. Backend/DevOps Developer
+               3. Get start with Spring: Create simple GET API with SpringBoot. &vert; Story of Jr. Backend/DevOps Developer
            
         
     </title>
-    <meta itemprop="name" content="Story of Jr. Backend/DevOps Developer.">
-    <meta itemprop="description" content="Story of Jr. Backend/DevOps Developer">
-    <meta property="og:title" content="Story of Jr. Backend/DevOps Developer.">
-    <meta property="og:description" content="Story of Jr. Backend/DevOps Developer">
+    <meta itemprop="name" content="3. Get start with Spring: Create simple GET API with SpringBoot.">
+    <meta itemprop="description" content="3. Get start with Spring: Create simple GET API with SpringBoot. - Story of Jr. Backend/DevOps Developer">
+    <meta property="og:title" content="3. Get start with Spring: Create simple GET API with SpringBoot.">
+    <meta property="og:description" content="3. Get start with Spring: Create simple GET API with SpringBoot. - Story of Jr. Backend/DevOps Developer">
     <meta property="og:image" content="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?size=200">
-    <meta property="og:url" content="https://kangdroid.github.io/en/">
-    <meta property="og:site_name" content="Story of Jr. Backend/DevOps Developer"><meta property="og:type" content="website">
+    <meta property="og:url" content="https://kangdroid.github.io/en/article/spring-study/3-spring-api-controller/">
+    <meta property="og:site_name" content="Story of Jr. Backend/DevOps Developer">
+    <meta property="og:type" content="article">
 
     
 
@@ -33,12 +34,12 @@
     <script src="/modernizr-simple.js"></script>
 
     
-    <link href="/en/" rel="alternate" type="application/rss+xml" title="Story of Jr. Backend/DevOps Developer" />
-    <link href="/en/" rel="feed" type="application/rss+xml" title="Story of Jr. Backend/DevOps Developer" />
+    <link href="/en/article/spring-study/3-spring-api-controller/" rel="alternate" type="application/rss+xml" title="Story of Jr. Backend/DevOps Developer" />
+    <link href="/en/article/spring-study/3-spring-api-controller/" rel="feed" type="application/rss+xml" title="Story of Jr. Backend/DevOps Developer" />
     
 
     
-    <link rel="canonical" href="https://kangdroid.github.io/en/">
+    <link rel="canonical" href="https://kangdroid.github.io/en/article/spring-study/3-spring-api-controller/">
     
 
     <link rel="stylesheet" href="https://kangdroid.github.io/theme.css">
@@ -118,25 +119,7 @@
 
     <div class="main container">
         
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-    
-
-    
-        
-    <div class="article-wrapper u-cf">
+    <div class="article-wrapper u-cf single">
         
             <a class="bubble" href="https://kangdroid.github.io/en/article/spring-study/3-spring-api-controller/">
     <i class="fas fa-fw fa-pencil-alt"></i>
@@ -176,9 +159,81 @@
     </div>
 
     
-        Lets create very simple controller with Spring Boot.
-
         
+
+        <h2 id="intro">Intro</h2>
+<p>This blog article aims to summarize or organize information that I&rsquo;ve learned from <a href="https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%9E%85%EB%AC%B8-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8">Inflearn Lecture</a></p>
+<p>Lecture does explain about SpringBoot using JAVA, but I am trying to organize information with my knowledge, especially comparing with ASP.NET Core(since ASP.NET Core is framework that I&rsquo;m really familiar of.) and using Kotlin.</p>
+<h2 id="key-points-of-aritcle">Key points of aritcle.</h2>
+<ul>
+<li>Create Simple API Controller.</li>
+<li>Comparing with ASP.NET Core(The one I&rsquo;m familiar of.)</li>
+</ul>
+<h2 id="lets-create-simple-api-controller">Let&rsquo;s create simple API Controller.</h2>
+<h3 id="brief-intro">Brief Intro.</h3>
+<p>I think this example/code will be very easy if the one is familiar of other backend frameworks/languages.</p>
+<h3 id="code">Code</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">package</span> com.kangdroid.initspringboot.controllers
+
+<span style="color:#66d9ef">import</span> org.springframework.stereotype.Controller
+<span style="color:#66d9ef">import</span> org.springframework.ui.Model
+<span style="color:#66d9ef">import</span> org.springframework.web.bind.annotation.GetMapping
+<span style="color:#66d9ef">import</span> org.springframework.web.bind.annotation.ResponseBody
+
+<span style="color:#a6e22e">@Controller</span> <span style="color:#75715e">// 1. Controller Class
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HelloController</span> {
+
+    <span style="color:#a6e22e">@GetMapping</span>(<span style="color:#e6db74">&#34;api/hello&#34;</span>) <span style="color:#75715e">// 2. api/hello Route Match
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">@ResponseBody</span> <span style="color:#75715e">// 3. Response Type is application/json (object)
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">helloApi</span>(): UserProjection {
+        <span style="color:#66d9ef">return</span> UserProjection(
+                nickName = <span style="color:#e6db74">&#34;KangDroid&#34;</span>,
+                email = <span style="color:#e6db74">&#34;kangdroid@test.com&#34;</span>,
+                role = <span style="color:#e6db74">&#34;Role.Developer&#34;</span>
+        )
+    }
+}
+
+<span style="color:#66d9ef">data</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UserProjection</span>(
+        <span style="color:#66d9ef">val</span> nickName: String,
+        <span style="color:#66d9ef">val</span> email: String,
+        <span style="color:#66d9ef">val</span> role: String
+)
+</code></pre></div><h3 id="run-result">Run Result</h3>
+<p><img src="/resources/spring-study/3_spring_api_controller/spring_result.png" alt=""></p>
+<h2 id="comparing-with-aspnet-core">Comparing with ASP.NET Core</h2>
+<h3 id="first-codec">First, Code(C#)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UserProjection</span> 
+{
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> NickName { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> Email { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> Role { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+}
+<span style="color:#a6e22e">
+</span><span style="color:#a6e22e">[ApiController]</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HelloController</span>: ControllerBase 
+{
+<span style="color:#a6e22e">    [HttpGet(&#34;/api/hello&#34;)]</span>
+    <span style="color:#66d9ef">public</span> ActionResult HelloApi()
+    {
+        <span style="color:#66d9ef">return</span> Ok(<span style="color:#66d9ef">new</span> UserProjection 
+        {
+            NickName = <span style="color:#e6db74">&#34;KangDroid&#34;</span>,
+            Email = <span style="color:#e6db74">&#34;kangdroid@test.com&#34;</span>,
+            Role = <span style="color:#e6db74">&#34;Role.Developer&#34;</span>
+        });
+    }
+}
+</code></pre></div><h3 id="thoughts">Thoughts.</h3>
+<p>Actually example code I wrote above is some kind of getting static object - not really complex, no middleware or filters. Therefore I cannot really say what is more comfortable to me, but I can say <code>There are something in common!</code></p>
+<p>Both languages/frameworks have some commonalities,</p>
+<ul>
+<li>Attribute/Annotation that the class acts as a Controller (<code>[ApiController]</code> vs <code>@Controller</code>)</li>
+<li>Attribute/Annotation defining HTTP method and routing (<code>[HttpGet(&quot;route-path&quot;)]</code> vs <code>@GetMapping(&quot;route-path&quot;)</code>)</li>
+<li>Whether the response value includes the object we want (UserProjection)</li>
+</ul>
+<p>Now, these parts are the comparison of the front-end part of the API logic, excluding the middleware/filter. I look forward to analyzing the middleware/filter concept or the actual DB logic part as I learn a little more in the future.</p>
+
     
 </div>
 
@@ -222,294 +277,17 @@
         
     </div>
 
-
     
-        
-    <div class="article-wrapper u-cf">
-        
-            <a class="bubble" href="https://kangdroid.github.io/en/article/spring-study/2-spring-view-templates/">
-    <i class="fas fa-fw fa-pencil-alt"></i>
-</a>
-
-<article class="default article">
-    
-
-    <div class="content">
-    <h1 class="article-title">
-        <a href="https://kangdroid.github.io/en/article/spring-study/2-spring-view-templates/">
-            2. Get start with Spring: Defining Template View &amp; Static View on SpringBoot
-        </a>
-    </h1>
-
-    <div class="meta">
-        
+        <div id="comments-container">
             
-                <span class="date moment">2023-01-13</span>
             
-        
 
-        
+            
 
-        
-            <span class="categories">
-                
-                    
-                    
-                        <a href="https://kangdroid.github.io/en/categories/spring-study/">spring-study</a>
-                    
-                
-            </span>
-        
+            
 
-        
-    </div>
-
-    
-        Lets use simple static view(Welcome Page), Template View.
-
-        
-    
-</div>
-
-    
-<div class="footer">
-
-
-    
-        <div class="tags">
-            <i class="fa fa-tags"></i>
-            <div class="links">
-                
-                    
-                    
-                    <a href="https://kangdroid.github.io/en/tags/spring/">spring</a>
-                    
-                
-                    
-                    
-                    <a href="https://kangdroid.github.io/en/tags/study/">study</a>
-                    
-                
-            </div>
         </div>
     
-
-    
-    <div class="languages">
-        <i class="fa fa-language"></i>
-        <div class="links">
-            
-                <a href="https://kangdroid.github.io/article/spring-study/2-spring-view-templates/">ko</a>
-            
-        </div>
-    </div>
-    
-</div>
-
-</article>
-
-        
-    </div>
-
-
-    
-        
-    <div class="article-wrapper u-cf">
-        
-            <a class="bubble" href="https://kangdroid.github.io/en/article/spring-study/1-spring-get-started/">
-    <i class="fas fa-fw fa-pencil-alt"></i>
-</a>
-
-<article class="default article">
-    
-
-    <div class="content">
-    <h1 class="article-title">
-        <a href="https://kangdroid.github.io/en/article/spring-study/1-spring-get-started/">
-            1. Get Start with Spring: Create SpringBoot project using Spring Initializr.
-        </a>
-    </h1>
-
-    <div class="meta">
-        
-            
-                <span class="date moment">2023-01-13</span>
-            
-        
-
-        
-
-        
-            <span class="categories">
-                
-                    
-                    
-                        <a href="https://kangdroid.github.io/en/categories/spring-study/">spring-study</a>
-                    
-                
-            </span>
-        
-
-        
-    </div>
-
-    
-        Create SpringBoot project via Spring Initializr and IntelliJ IDEA.
-
-        
-    
-</div>
-
-    
-<div class="footer">
-
-
-    
-        <div class="tags">
-            <i class="fa fa-tags"></i>
-            <div class="links">
-                
-                    
-                    
-                    <a href="https://kangdroid.github.io/en/tags/spring/">spring</a>
-                    
-                
-                    
-                    
-                    <a href="https://kangdroid.github.io/en/tags/study/">study</a>
-                    
-                
-            </div>
-        </div>
-    
-
-    
-    <div class="languages">
-        <i class="fa fa-language"></i>
-        <div class="links">
-            
-                <a href="https://kangdroid.github.io/article/spring-study/1-spring-get-started/">ko</a>
-            
-        </div>
-    </div>
-    
-</div>
-
-</article>
-
-        
-    </div>
-
-
-    
-        
-    <div class="article-wrapper u-cf">
-        
-            <a class="bubble" href="https://kangdroid.github.io/en/article/kubernetes-cluster-on-different-network/1-project-start/">
-    <i class="fas fa-fw fa-pencil-alt"></i>
-</a>
-
-<article class="default article">
-    
-
-    <div class="content">
-    <h1 class="article-title">
-        <a href="https://kangdroid.github.io/en/article/kubernetes-cluster-on-different-network/1-project-start/">
-            1. Create Kubernetes(K3s) Cluster across different network configurations - Intro
-        </a>
-    </h1>
-
-    <div class="meta">
-        
-            
-                <span class="date moment">2022-11-02</span>
-            
-        
-
-        
-
-        
-            <span class="categories">
-                
-                    
-                    
-                        <a href="https://kangdroid.github.io/en/categories/k3s-cluster-accross-multiple-network/">K3s cluster accross multiple network</a>
-                    
-                
-            </span>
-        
-
-        
-    </div>
-
-    
-        Brief intro of this project.
-
-        
-    
-</div>
-
-    
-<div class="footer">
-
-
-    
-        <div class="tags">
-            <i class="fa fa-tags"></i>
-            <div class="links">
-                
-                    
-                    
-                    <a href="https://kangdroid.github.io/en/tags/kubernetes/">kubernetes</a>
-                    
-                
-                    
-                    
-                    <a href="https://kangdroid.github.io/en/tags/k8s/">k8s</a>
-                    
-                
-                    
-                    
-                    <a href="https://kangdroid.github.io/en/tags/k3s/">k3s</a>
-                    
-                
-                    
-                    
-                    <a href="https://kangdroid.github.io/en/tags/multiregion/">multiregion</a>
-                    
-                
-            </div>
-        </div>
-    
-
-    
-    <div class="languages">
-        <i class="fa fa-language"></i>
-        <div class="links">
-            
-                <a href="https://kangdroid.github.io/article/kubernetes-cluster-on-different-network/1-project-start/">ko</a>
-            
-        </div>
-    </div>
-    
-</div>
-
-</article>
-
-        
-    </div>
-
-
-    
-
-    
-    <div class="paginator">
-        
-
-        
-    </div>
-
-
 
     </div>
 
@@ -605,8 +383,7 @@
                 
                 by Jason HyunWoo Kang(KangDroid)
             </a>
-            -
-            <a href="https://kangdroid.github.io/en/index.xml">RSS</a>
+            
         </div>
         <div class="author">
             <a href="https://github.com/Lednerb/bilberry-hugo-theme"
