@@ -15,16 +15,16 @@
     <title>
         
            
-               1. Spring 시작해 보기: Spring Initializr를 사용해서 첫 Spring Boot 프로젝트 생성하기. &vert; 주니어 백엔드/DevOps의 우당탕탕 스토리
+               3. Spring 시작해 보기: Spring Boot 에서 간단한 API Controller 만들어 보기. &vert; 주니어 백엔드/DevOps의 우당탕탕 스토리
            
         
     </title>
-    <meta itemprop="name" content="1. Spring 시작해 보기: Spring Initializr를 사용해서 첫 Spring Boot 프로젝트 생성하기.">
-    <meta itemprop="description" content="1. Spring 시작해 보기: Spring Initializr를 사용해서 첫 Spring Boot 프로젝트 생성하기. - Story of Jr. Backend/DevOps Developer">
-    <meta property="og:title" content="1. Spring 시작해 보기: Spring Initializr를 사용해서 첫 Spring Boot 프로젝트 생성하기.">
-    <meta property="og:description" content="1. Spring 시작해 보기: Spring Initializr를 사용해서 첫 Spring Boot 프로젝트 생성하기. - Story of Jr. Backend/DevOps Developer">
+    <meta itemprop="name" content="3. Spring 시작해 보기: Spring Boot 에서 간단한 API Controller 만들어 보기.">
+    <meta itemprop="description" content="3. Spring 시작해 보기: Spring Boot 에서 간단한 API Controller 만들어 보기. - Story of Jr. Backend/DevOps Developer">
+    <meta property="og:title" content="3. Spring 시작해 보기: Spring Boot 에서 간단한 API Controller 만들어 보기.">
+    <meta property="og:description" content="3. Spring 시작해 보기: Spring Boot 에서 간단한 API Controller 만들어 보기. - Story of Jr. Backend/DevOps Developer">
     <meta property="og:image" content="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?size=200">
-    <meta property="og:url" content="https://kangdroid.github.io/article/spring-study/1-spring-get-started/">
+    <meta property="og:url" content="https://kangdroid.github.io/article/spring-study/3-spring-api-controller/">
     <meta property="og:site_name" content="주니어 백엔드/DevOps의 우당탕탕 스토리">
     <meta property="og:type" content="article">
 
@@ -34,12 +34,12 @@
     <script src="/modernizr-simple.js"></script>
 
     
-    <link href="/article/spring-study/1-spring-get-started/" rel="alternate" type="application/rss+xml" title="주니어 백엔드/DevOps의 우당탕탕 스토리" />
-    <link href="/article/spring-study/1-spring-get-started/" rel="feed" type="application/rss+xml" title="주니어 백엔드/DevOps의 우당탕탕 스토리" />
+    <link href="/article/spring-study/3-spring-api-controller/" rel="alternate" type="application/rss+xml" title="주니어 백엔드/DevOps의 우당탕탕 스토리" />
+    <link href="/article/spring-study/3-spring-api-controller/" rel="feed" type="application/rss+xml" title="주니어 백엔드/DevOps의 우당탕탕 스토리" />
     
 
     
-    <link rel="canonical" href="https://kangdroid.github.io/article/spring-study/1-spring-get-started/">
+    <link rel="canonical" href="https://kangdroid.github.io/article/spring-study/3-spring-api-controller/">
     
 
     <link rel="stylesheet" href="https://kangdroid.github.io/theme.css">
@@ -125,7 +125,7 @@
         
     <div class="article-wrapper u-cf single">
         
-            <a class="bubble" href="https://kangdroid.github.io/article/spring-study/1-spring-get-started/">
+            <a class="bubble" href="https://kangdroid.github.io/article/spring-study/3-spring-api-controller/">
     <i class="fas fa-fw fa-pencil-alt"></i>
 </a>
 
@@ -134,8 +134,8 @@
 
     <div class="content">
     <h1 class="article-title">
-        <a href="https://kangdroid.github.io/article/spring-study/1-spring-get-started/">
-            1. Spring 시작해 보기: Spring Initializr를 사용해서 첫 Spring Boot 프로젝트 생성하기.
+        <a href="https://kangdroid.github.io/article/spring-study/3-spring-api-controller/">
+            3. Spring 시작해 보기: Spring Boot 에서 간단한 API Controller 만들어 보기.
         </a>
     </h1>
 
@@ -170,67 +170,74 @@
 <p>특히 해당 강의 내용은 Java Spring Boot을 기준으로 설명하지만, 적절히 현재 현업에서 사용중인 ASP.NET Core과 비교도 하면서, 관심이 많았던 Kotlin 언어를 적절히 적용해서 정리합니다.</p>
 <h2 id="이번-정리의-핵심">이번 정리의 핵심</h2>
 <ul>
-<li>Spring InitializR을 사용해서 기본적인 Spring Boot 프로젝트 생성하기.</li>
-<li>IntelliJ IDEA(Ultimate) + Spring InitializR를 사용해서 기본적인 Spring Boot 프로젝트 생성하기.</li>
+<li>간단하게 API Controller 짜보기</li>
+<li>ASP.NET 과 비교해 보기.</li>
 </ul>
-<h2 id="프로젝트-생성-시-공통-사항">프로젝트 생성 시 공통 사항.</h2>
+<h2 id="간단하게-api-controller-짜-보기">간단하게 API Controller 짜 보기.</h2>
+<h3 id="개요">개요</h3>
+<p>정적인 객체를 JSON 으로 직렬화 해서 반환하는 예제인데, 다른 언어/프레임워크에서 API개발을 해 보았으면 간단한 예제일 것으로 생각됩니다.</p>
+<h3 id="코드">코드</h3>
+<p>전체적으로 Controller 클래스에 Routing과 HTTP Method를 정의해 주고, Response Body를 반환 하는 정도입니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">package</span> com.kangdroid.initspringboot.controllers
+
+<span style="color:#66d9ef">import</span> org.springframework.stereotype.Controller
+<span style="color:#66d9ef">import</span> org.springframework.ui.Model
+<span style="color:#66d9ef">import</span> org.springframework.web.bind.annotation.GetMapping
+<span style="color:#66d9ef">import</span> org.springframework.web.bind.annotation.ResponseBody
+
+<span style="color:#a6e22e">@Controller</span> <span style="color:#75715e">// 1. 해당 클래스는 컨트롤러 클래스.
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HelloController</span> {
+
+    <span style="color:#a6e22e">@GetMapping</span>(<span style="color:#e6db74">&#34;api/hello&#34;</span>) <span style="color:#75715e">// 2. api/hello Route Match
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">@ResponseBody</span> <span style="color:#75715e">// 3. Response Type is application/json (object)
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">helloApi</span>(): UserProjection {
+        <span style="color:#66d9ef">return</span> UserProjection(
+                nickName = <span style="color:#e6db74">&#34;KangDroid&#34;</span>,
+                email = <span style="color:#e6db74">&#34;kangdroid@test.com&#34;</span>,
+                role = <span style="color:#e6db74">&#34;Role.Developer&#34;</span>
+        )
+    }
+}
+
+<span style="color:#66d9ef">data</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UserProjection</span>(
+        <span style="color:#66d9ef">val</span> nickName: String,
+        <span style="color:#66d9ef">val</span> email: String,
+        <span style="color:#66d9ef">val</span> role: String
+)
+</code></pre></div><h3 id="실행-결과">실행 결과</h3>
+<p><img src="/resources/spring-study/3_spring_api_controller/spring_result.png" alt=""></p>
+<h2 id="aspnet-코드와-비교해-보기">ASP.NET 코드와 비교해 보기</h2>
+<h3 id="먼저-코드c">먼저 코드(C#)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UserProjection</span> 
+{
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> NickName { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> Email { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> Role { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+}
+<span style="color:#a6e22e">
+</span><span style="color:#a6e22e">[ApiController]</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HelloController</span>: ControllerBase 
+{
+<span style="color:#a6e22e">    [HttpGet(&#34;/api/hello&#34;)]</span>
+    <span style="color:#66d9ef">public</span> ActionResult HelloApi()
+    {
+        <span style="color:#66d9ef">return</span> Ok(<span style="color:#66d9ef">new</span> UserProjection 
+        {
+            NickName = <span style="color:#e6db74">&#34;KangDroid&#34;</span>,
+            Email = <span style="color:#e6db74">&#34;kangdroid@test.com&#34;</span>,
+            Role = <span style="color:#e6db74">&#34;Role.Developer&#34;</span>
+        });
+    }
+}
+</code></pre></div><h3 id="분석은-아니지만-그냥-개인적인-생각">분석(은 아니지만 그냥 개인적인 생각)</h3>
+<p>사실 위 예제는 CRUD API도 아니고 그냥 정적인 객체를 READ하는 GET API 입니다. 따라서 제대로 된 분석은 할 수 없겠지만, 그래도 첫 인상은 <code>비슷한 부분이 있네!</code> 정도인 것 같습니다.</p>
+<p>두 언어/프레임워크 모두 공통적인 부분을 어느정도 포함하는데요,</p>
 <ul>
-<li>Gradle은 Kotlin Gradle DSL 사용</li>
-<li>언어는 Kotlin!</li>
-<li>Spring Boot 버전은 3.0.1 버전 사용.</li>
-<li>Dependencies:
-<ul>
-<li>Spring Web</li>
-<li>Thymeleaf</li>
+<li>클래스가 Controller 역할을 한다는 Attribute/Annotation(<code>[ApiController]</code> vs <code>@Controller</code>)</li>
+<li>HTTP Method와 라우팅을 정의하는 Attribute/Annotation(<code>[HttpGet(&quot;route-path&quot;)]</code> vs <code>@GetMapping(&quot;route-path&quot;)</code>)</li>
+<li>응답 값에 우리가 원하는 객체(UserProjection) 포함 여부</li>
 </ul>
-</li>
-<li>나머지 메타 데이터는 적절히.</li>
-</ul>
-<h2 id="spring-initializr을-사용해서-기본적인-프로젝트-생성하기">Spring InitializR을 사용해서 기본적인 프로젝트 생성하기.</h2>
-<h3 id="전체적인-흐름">전체적인 흐름</h3>
-<ol>
-<li>start.spring.io 접속</li>
-<li><code>프로젝트 생성 시 공통 사항</code>을 참고해서 프로젝트 설정</li>
-<li>프로젝트 생성 &amp; 다운로드</li>
-<li>IntelliJ IDEA로 프로젝트 열고, 간단하게 실행.</li>
-</ol>
-<h3 id="1-startspringio-접속">1. start.spring.io 접속</h3>
-<p>start.spring.io에 접속하면 기본적으로 아래와 같은 페이지가 뜨고 있습니다.
-<img src="/resources/spring-study/1_get_started/spring_init.png" alt=""></p>
-<h3 id="2-프로젝트-기본-설정">2. 프로젝트 기본 설정</h3>
-<p>아래 사진과, 공통 사항 부분을 참고해서 프로젝트 설정을 진행합니다.
-<img src="/resources/spring-study/1_get_started/spring_init_two.png" alt=""></p>
-<h3 id="3-프로젝트-생성--다운로드generate">3. 프로젝트 생성 &amp; 다운로드(Generate)</h3>
-<p>start.spring.io 홈페이지에서 프로젝트 설정을 해 주고, 하단의 <code>Generate</code> 버튼을 클릭해서 프로젝트를 생성하고, 다운로드 합니다. 다운로드 후에 압축을 풀면, 아래 스크린샷과 같은 구조가 있을 겁니다.
-<img src="/resources/spring-study/1_get_started/project_structure.png" alt=""></p>
-<h3 id="4-intellij-idea로-프로젝트-열기">4. IntelliJ IDEA로 프로젝트 열기.</h3>
-<p>IntellIJ IDEA를 실행하면 아래와 같은 창이 뜨는데, Open을 클릭해서 다운받고 압축 푼 프로젝트를 열어 줍니다. 열고 나면 아래와 같이 프로젝트가 IDE로 열리고, 몇가지 기본 작업들을 실행하고 있을 것입니다.
-<img src="/resources/spring-study/1_get_started/intellij_idea_open.png" alt=""></p>
-<h3 id="5-프로젝트-실행하기">5. 프로젝트 실행하기.</h3>
-<p>(현재 글 작성자 본인은 Jetbrain Rider에서도 NewUI를 쓰고 있으며, 현재 IntelliJ IDEA에서도 New UI를 쓰고 있습니다.)</p>
-<p>우측 상단에 &ldquo;플레이&rdquo; 버튼을 누르면 프로젝트가 빌드 &amp; 실행 됩니다. 아래 스크린샷은 프로젝트를 실행했을 때의 모습입니다.
-<img src="/resources/spring-study/1_get_started/project_run.png" alt=""></p>
-<h2 id="intellij-idea를-이용해서-프로젝트-생성">IntelliJ IDEA를 이용해서 프로젝트 생성</h2>
-<p>IntelliJ IDEA 자체적으로 start.spring.io의 API를 사용해서 프로젝트를 만들 수도 있습니다. 이 섹션에서는 start.spring.io 접속 없이 IntelliJ IDEA로만으로 프로젝트를 설정하는 방법을 정리합니다.</p>
-<h3 id="전체적인-흐름-1">전체적인 흐름</h3>
-<ol>
-<li>IntelliJ IDEA에서 <code>New Project</code>실행</li>
-<li>Generator 측에서 <code>Spring Initializr</code> 선택 &amp; 프로젝트 기본 설정</li>
-<li>Dependencies 정의</li>
-<li>프로젝트 실행</li>
-</ol>
-<h3 id="1-intellij-idea에서-new-project실행">1. IntelliJ IDEA에서 <code>New Project</code>실행</h3>
-<p>New Project을 실행하면 다음과 같은 화면이 나옵니다.
-<img src="/resources/spring-study/1_get_started/new_project_before.png" alt=""></p>
-<h3 id="2-generator-측에서-spring-initializr-선택--프로젝트-기본-설정">2. Generator 측에서 <code>Spring Initializr</code> 선택 &amp; 프로젝트 기본 설정</h3>
-<p><code>Spring Initializr</code>은 왼쪽 사이드바에서 확인할 수 있습니다. 공통 프로젝트 설정처럼 언어 등을 설정합니다.
-<img src="/resources/spring-study/1_get_started/project_settings.png" alt=""></p>
-<h3 id="3-dependencies-정의">3. Dependencies 정의</h3>
-<p>다음으로 넘어가면 아래 사진처럼 Dependencies를 설정할 수 있습니다. 설정 후, Create 버튼을 눌러 프로젝트를 설정 &amp; 열어 주세요.
-<img src="/resources/spring-study/1_get_started/project_settings.png" alt=""></p>
-<h3 id="4-프로젝트-실행">4. 프로젝트 실행</h3>
-<p>프로젝트 실행은 Spring Initializr을 사용했을 때와 다를 바 없습니다!(아래 사진 참고)
-<img src="/resources/spring-study/1_get_started/run_project_init.png" alt=""></p>
+<p>지금 이 부분들은 API 로직 중, 미들웨어/필터를 제외한 가장 앞단을 비교한 것인데요, 앞으로 조금 더 배우면서 미들웨어/필터 개념이나, 실제 DB로직 부분도 비슷한지 분석하는 것이 기대가 됩니다.</p>
 
     
 </div>
