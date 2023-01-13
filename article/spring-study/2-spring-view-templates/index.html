@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+
+
+  
+<html itemscope itemtype="https://schema.org/WebPage" class="no-js" lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="siteBaseUrl" content="https://kangdroid.github.io">
+    <meta name="author" content="KangDroid">
+    <meta name="description" content="Story of Jr. Backend/DevOps Developer">
+    <meta name="keywords" content="blog,personal,junior,backend,devops">
+    <meta name="generator" content="Hugo 0.92.2" />
+    <title>
+        
+           
+               2. Spring 시작해 보기: Spring Boot 에서 정적 View와 Template View &vert; 주니어 백엔드/DevOps의 우당탕탕 스토리
+           
+        
+    </title>
+    <meta itemprop="name" content="2. Spring 시작해 보기: Spring Boot 에서 정적 View와 Template View">
+    <meta itemprop="description" content="2. Spring 시작해 보기: Spring Boot 에서 정적 View와 Template View - Story of Jr. Backend/DevOps Developer">
+    <meta property="og:title" content="2. Spring 시작해 보기: Spring Boot 에서 정적 View와 Template View">
+    <meta property="og:description" content="2. Spring 시작해 보기: Spring Boot 에서 정적 View와 Template View - Story of Jr. Backend/DevOps Developer">
+    <meta property="og:image" content="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?size=200">
+    <meta property="og:url" content="https://kangdroid.github.io/article/spring-study/2-spring-view-templates/">
+    <meta property="og:site_name" content="주니어 백엔드/DevOps의 우당탕탕 스토리">
+    <meta property="og:type" content="article">
+
+    
+
+
+    <script src="/modernizr-simple.js"></script>
+
+    
+    <link href="/article/spring-study/2-spring-view-templates/" rel="alternate" type="application/rss+xml" title="주니어 백엔드/DevOps의 우당탕탕 스토리" />
+    <link href="/article/spring-study/2-spring-view-templates/" rel="feed" type="application/rss+xml" title="주니어 백엔드/DevOps의 우당탕탕 스토리" />
+    
+
+    
+    <link rel="canonical" href="https://kangdroid.github.io/article/spring-study/2-spring-view-templates/">
+    
+
+    <link rel="stylesheet" href="https://kangdroid.github.io/theme.css">
+
+    
+
+    
+        
+    
+</head>
+
+<body class="bilberry-hugo-theme">
+
+    
+    <nav>
+
+    <div class="container">
+        <ul class="topnav">
+            
+                
+                    <li><a href="https://kangdroid.github.io/page/about-me/">About Me</a></li>
+                
+            
+        </ul>
+
+        
+    </div>
+</nav>
+
+
+    
+    <header>
+
+    <div class="container">
+        <div class="logo">
+            <a href="/" class="logo">
+                
+                    
+                    
+                        
+                    
+                    <img src="https://seccdn.libravatar.org/avatar/be3d4c16125bae6aaad41af38ad989d5?d=mm&size=200" alt="">
+                
+
+                <span class="overlay"><i class="fa fa-home"></i></span>
+            </a>
+        </div>
+        <div class="titles">
+            <h3 class="title">
+                <a href="/">
+                    주니어 백엔드/DevOps의 우당탕탕 스토리
+                </a>
+            </h3>
+
+            
+                <span class="subtitle">Story of Jr. Backend/DevOps Developer.</span>
+            
+        </div>
+
+        <div class="languages">
+            
+                
+                    <a href="https://kangdroid.github.io/" class="active">ko</a>
+                
+            
+                
+                    <a href="https://kangdroid.github.io/en/">en</a>
+                
+            
+            </div>
+        
+
+        
+            <div class="toggler">
+        
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </div>
+    </div>
+</header>
+
+
+    <div class="main container">
+        
+    <div class="article-wrapper u-cf single">
+        
+            <a class="bubble" href="https://kangdroid.github.io/article/spring-study/2-spring-view-templates/">
+    <i class="fas fa-fw fa-pencil-alt"></i>
+</a>
+
+<article class="default article">
+    
+
+    <div class="content">
+    <h1 class="article-title">
+        <a href="https://kangdroid.github.io/article/spring-study/2-spring-view-templates/">
+            2. Spring 시작해 보기: Spring Boot 에서 정적 View와 Template View
+        </a>
+    </h1>
+
+    <div class="meta">
+        
+            
+                <span class="date moment">2023-01-13</span>
+            
+        
+
+        
+
+        
+            <span class="categories">
+                
+                    
+                    
+                        <a href="https://kangdroid.github.io/categories/spring-study/">spring-study</a>
+                    
+                
+            </span>
+        
+
+        
+    </div>
+
+    
+        
+
+        <h2 id="intro">Intro</h2>
+<p>이번 동아리에서 진행하는 Spring Study을 통해서 <a href="https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%9E%85%EB%AC%B8-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8">인프런 강의</a>를 듣고, 관련 내용을 정리합니다. <!-- raw HTML omitted --></p>
+<p>특히 해당 강의 내용은 Java Spring Boot을 기준으로 설명하지만, 적절히 현재 현업에서 사용중인 ASP.NET Core과 비교도 하면서, 관심이 많았던 Kotlin 언어를 적절히 적용해서 정리합니다.</p>
+<h2 id="이번-정리의-핵심">이번 정리의 핵심</h2>
+<ul>
+<li>Welcome Page!(정적 View)</li>
+<li>Template &amp;&amp; View Controller</li>
+</ul>
+<h2 id="welcome-page">Welcome Page</h2>
+<h3 id="개요">개요</h3>
+<blockquote>
+<p>Spring Boot supports both static and templated welcome pages. It first looks for an <code>index.html</code> file in the configured static content locations. If one is not found, it then looks for an <code>index</code> template. If either is found, it is automatically used as the welcome page of the application.</p>
+</blockquote>
+<p>즉, Spring은 Static/Template화 된 Welcome Page 기능을 제공하는데, Static Content Location(<code>$ROOT/src/main/resources/static</code>)에 있는 index.html 을 찾아보고, 없으면 index template를 찾아본다는 뜻. (아래는 Search Order)</p>
+<ol>
+<li><code>$ROOT/src/main/resources/static/index.html</code></li>
+<li><code>$ROOT/src/main/resources/templates/index</code></li>
+</ol>
+<h3 id="welcome-page를-작성해-봅시다">Welcome Page를 작성해 봅시다!</h3>
+<p><code>$ROOT/src/main/resources/static</code>에 index.html을 아래와 같이 적어본다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
+    &lt;<span style="color:#f92672">title</span>&gt;Title&lt;/<span style="color:#f92672">title</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+Hello, World!
+&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/hello&#34;</span>&gt;Go to Hello Page&lt;/<span style="color:#f92672">a</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><h3 id="실행-결과">실행 결과</h3>
+<p><img src="/resources/spring-study/2_spring_view_templates/static_result.png" alt=""></p>
+<h2 id="template--view-controller">Template &amp;&amp; View Controller</h2>
+<h3 id="개요-1">개요</h3>
+<p>Thymeleaf Engine 템플릿을 사용해서 View를 정의한다. 전체적으로 코드와 작동 방식 보니까 Razor View Page랑 거의 비슷해 보이는데, 결국 서버 쪽에서 데이터를 충분히 담에서 View 자체를 반환하는 것을 의미합니다. 흔히 &lsquo;템플릿&rsquo; 엔진에서는 서버에서 담아주는 데이터를 각 템플릿 언어에 맞게 치환해서 사용자에게 보여줍니다.</p>
+<p>개인적으로는, Thymeleaf보다는 Razor Page가 조금 더 편해 보이는? - Razor Page는 (백엔드 코드로 쓰이는) C# 코드를 거의 대부분 쓸 수 있지만 Thymeleaf같은 템플릿은 템플릿 언어가 따로 있어서&hellip;</p>
+<p>어찌 되었든, 이 섹션에서는 크게 두가지 컴포넌트로 나뉘는 것 같은데요, 아래 2가지와 같습니다.</p>
+<ul>
+<li>데이터를 반환하는 Controller</li>
+<li>받은 데이터를 적절히 보여줄 View(HTML + Template Engine)</li>
+</ul>
+<h3 id="template-view-작성하기">Template View 작성하기</h3>
+<p><code>$ROOT/src/main/resources/templates/hello.html</code> 작성(Thymeleaf Engine 템플릿 사용)</p>
+<p>아래 코드 중 <code>${data}</code> 부분이 서버(View Controller)에서 내려주는 데이터, 아래 예시에서는 단순한 String 값.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span> <span style="color:#a6e22e">xmlns:th</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://www.thymeleaf.org&#34;</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
+    &lt;<span style="color:#f92672">title</span>&gt;Title&lt;/<span style="color:#f92672">title</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">th:text</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#39;Hello &#39; + ${data}&#34;</span>&gt;Hello!&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><h3 id="controller-정의controllershellocontrollerkt">Controller 정의(controllers/HelloController.kt)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">import</span> org.springframework.stereotype.Controller
+<span style="color:#66d9ef">import</span> org.springframework.ui.Model
+<span style="color:#66d9ef">import</span> org.springframework.web.bind.annotation.GetMapping
+
+<span style="color:#a6e22e">@Controller</span> <span style="color:#75715e">// 1. 해당 클래스는 컨트롤러 클래스.
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HelloController</span> {
+    <span style="color:#a6e22e">@GetMapping</span>(<span style="color:#e6db74">&#34;hello&#34;</span>) <span style="color:#75715e">// 2. HTTP GET 요청, &#34;$HOST/hello&#34; 요청 들어왔을 때, 함수 실행
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">hello</span>(model: Model): String {
+        model.addAttribute(<span style="color:#e6db74">&#34;data&#34;</span>, <span style="color:#e6db74">&#34;KangDroid&#34;</span>) <span style="color:#75715e">// 3. HTML에서 정의한 &#39;data&#39;에 &#39;KangDroid&#39;라는 값 할당
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;hello&#34;</span> <span style="color:#75715e">// 4. resources/templates/hello.html 템플릿 사용
+</span><span style="color:#75715e"></span>    }
+}
+</code></pre></div><h3 id="실행-결과-1">실행 결과</h3>
+<p><img src="/resources/spring-study/2_spring_view_templates/template_result.png" alt=""></p>
+
+    
+</div>
+
+    
+<div class="footer">
+
+
+    
+        <div class="tags">
+            <i class="fa fa-tags"></i>
+            <div class="links">
+                
+                    
+                    
+                    <a href="https://kangdroid.github.io/tags/spring/">spring</a>
+                    
+                
+                    
+                    
+                    <a href="https://kangdroid.github.io/tags/study/">study</a>
+                    
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+</article>
+
+        
+    </div>
+
+    
+        <div id="comments-container">
+            
+            
+
+            
+
+            
+
+        </div>
+    
+
+    </div>
+
+    
+<footer>
+    <div class="container">
+
+        
+        <div class="recent-posts">
+            <strong>최근 글</strong>
+            <ul>
+                
+                
+                    <li>
+                        <a href="https://kangdroid.github.io/article/spring-study/2-spring-view-templates/">2. Spring 시작해 보기: Spring Boot 에서 정적 View와 Template View</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://kangdroid.github.io/article/spring-study/1-spring-get-started/">1. Spring 시작해 보기: Spring Initializr를 사용해서 첫 Spring Boot 프로젝트 생성하기.</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://kangdroid.github.io/article/kubernetes-cluster-on-different-network/1-project-start/">1. 여러 네트워크에 있는 노드를 연결해서 Kubernetes(K3S) 클러스터 구축하기 - 소개편</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://kangdroid.github.io/article/mongodb-apac-2022/1-mongodb-data-platform/">Mongodb Apac 2022 - MongoDB Developer Data Platform</a>
+                    </li>
+                
+            </ul>
+        </div>
+        
+
+        
+        <div class="categories">
+            <a href="/categories/"><strong>카테고리</strong></a>
+            <ul>
+                
+                <li>
+                    <a href="/categories/spring-study">Spring study
+                        (2)</a>
+                </li>
+                
+                <li>
+                    <a href="/categories/conference">Conference
+                        (1)</a>
+                </li>
+                
+                <li>
+                    <a href="/categories/k3s-cluster-accross-multiple-network">K3s cluster accross multiple network
+                        (1)</a>
+                </li>
+                
+                <li>
+                    <a href="/categories/mongodb-apac-2022-seoul">Mongodb apac 2022 seoul
+                        (1)</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+
+        <div class="right">
+            
+            <div class="external-profiles">
+                <strong>소셜 미디어</strong>
+
+                
+                <a href="https://twitter.com/kanghw0720" target="_blank"><i class="fab fa-twitter"></i></a>
+                
+                <a href="https://github.com/KangDroid" target="_blank"><i class="fab fa-github"></i></a>
+                
+            </div>
+            
+
+            <div class="languages">
+                <strong>다국어</strong>
+                
+                
+                <a href="https://kangdroid.github.io/" class="active">ko</a>
+                
+                
+                
+                <a href="https://kangdroid.github.io/en/">en</a>
+                
+                
+            </div>
+            
+
+            
+        </div>
+    </div>
+</footer>
+
+
+<div class="credits">
+    <div class="container">
+        <div class="copyright">
+            <a href="https://github.com/KangDroid" target="_blank">
+                &copy;
+                
+                2023
+                
+                by Jason HyunWoo Kang(KangDroid)
+            </a>
+            
+        </div>
+        <div class="author">
+            <a href="https://github.com/Lednerb/bilberry-hugo-theme"
+                target="_blank">Bilberry Hugo Theme</a>
+        </div>
+    </div>
+</div>
+
+
+    
+
+    
+
+
+    <script src="https://kangdroid.github.io/theme.js"></script>
+
+    
+    
+    
+
+    
+</body>
+
+</html>

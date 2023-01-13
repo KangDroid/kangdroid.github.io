@@ -5,7 +5,16 @@
     <link>https://kangdroid.github.io/categories/spring-study/</link>
     <description>Recent content in spring-study on 주니어 백엔드/DevOps의 우당탕탕 스토리</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 13 Jan 2023 19:00:00 +0900</lastBuildDate><atom:link href="https://kangdroid.github.io/categories/spring-study/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 13 Jan 2023 20:00:00 +0900</lastBuildDate><atom:link href="https://kangdroid.github.io/categories/spring-study/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2. Spring 시작해 보기: Spring Boot 에서 정적 View와 Template View</title>
+      <link>https://kangdroid.github.io/article/spring-study/2-spring-view-templates/</link>
+      <pubDate>Fri, 13 Jan 2023 20:00:00 +0900</pubDate>
+      
+      <guid>https://kangdroid.github.io/article/spring-study/2-spring-view-templates/</guid>
+      <description>SpringBoot에서 간단한 정적 뷰(Welcome Page)와, 템플릿 뷰를 사용해 봅니다.</description>
+    </item>
+    
     <item>
       <title>1. Spring 시작해 보기: Spring Initializr를 사용해서 첫 Spring Boot 프로젝트 생성하기.</title>
       <link>https://kangdroid.github.io/article/spring-study/1-spring-get-started/</link>
