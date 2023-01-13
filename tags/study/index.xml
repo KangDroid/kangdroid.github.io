@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>study on 주니어 백엔드/DevOps의 우당탕탕 스토리</title>
+    <link>https://kangdroid.github.io/tags/study/</link>
+    <description>Recent content in study on 주니어 백엔드/DevOps의 우당탕탕 스토리</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 13 Jan 2023 19:00:00 +0900</lastBuildDate><atom:link href="https://kangdroid.github.io/tags/study/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1. Spring 시작해 보기: Spring Initializr를 사용해서 첫 Spring Boot 프로젝트 생성하기.</title>
+      <link>https://kangdroid.github.io/article/spring-study/1-spring-get-started/</link>
+      <pubDate>Fri, 13 Jan 2023 19:00:00 +0900</pubDate>
+      
+      <guid>https://kangdroid.github.io/article/spring-study/1-spring-get-started/</guid>
+      <description>Spring Initializr와 IntelliJ IDEA로 Spring Boot 프로젝트를 생성합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

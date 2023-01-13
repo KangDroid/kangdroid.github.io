@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+
+
+  
+<html itemscope itemtype="https://schema.org/WebPage" class="no-js" lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="siteBaseUrl" content="https://kangdroid.github.io">
+    <meta name="author" content="KangDroid">
+    <meta name="description" content="Story of Jr. Backend/DevOps Developer">
+    <meta name="keywords" content="blog,personal,junior,backend,devops">
+    <meta name="generator" content="Hugo 0.92.2" />
+    <title>
+        
+           
+               1. Spring 시작해 보기: Spring Initializr를 사용해서 첫 Spring Boot 프로젝트 생성하기. &vert; 주니어 백엔드/DevOps의 우당탕탕 스토리
+           
+        
+    </title>
+    <meta itemprop="name" content="1. Spring 시작해 보기: Spring Initializr를 사용해서 첫 Spring Boot 프로젝트 생성하기.">
+    <meta itemprop="description" content="1. Spring 시작해 보기: Spring Initializr를 사용해서 첫 Spring Boot 프로젝트 생성하기. - Story of Jr. Backend/DevOps Developer">
+    <meta property="og:title" content="1. Spring 시작해 보기: Spring Initializr를 사용해서 첫 Spring Boot 프로젝트 생성하기.">
+    <meta property="og:description" content="1. Spring 시작해 보기: Spring Initializr를 사용해서 첫 Spring Boot 프로젝트 생성하기. - Story of Jr. Backend/DevOps Developer">
+    <meta property="og:image" content="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?size=200">
+    <meta property="og:url" content="https://kangdroid.github.io/article/spring-study/1-spring-get-started/">
+    <meta property="og:site_name" content="주니어 백엔드/DevOps의 우당탕탕 스토리">
+    <meta property="og:type" content="article">
+
+    
+
+
+    <script src="/modernizr-simple.js"></script>
+
+    
+    <link href="/article/spring-study/1-spring-get-started/" rel="alternate" type="application/rss+xml" title="주니어 백엔드/DevOps의 우당탕탕 스토리" />
+    <link href="/article/spring-study/1-spring-get-started/" rel="feed" type="application/rss+xml" title="주니어 백엔드/DevOps의 우당탕탕 스토리" />
+    
+
+    
+    <link rel="canonical" href="https://kangdroid.github.io/article/spring-study/1-spring-get-started/">
+    
+
+    <link rel="stylesheet" href="https://kangdroid.github.io/theme.css">
+
+    
+
+    
+        
+    
+</head>
+
+<body class="bilberry-hugo-theme">
+
+    
+    <nav>
+
+    <div class="container">
+        <ul class="topnav">
+            
+                
+                    <li><a href="https://kangdroid.github.io/page/about-me/">About Me</a></li>
+                
+            
+        </ul>
+
+        
+    </div>
+</nav>
+
+
+    
+    <header>
+
+    <div class="container">
+        <div class="logo">
+            <a href="/" class="logo">
+                
+                    
+                    
+                        
+                    
+                    <img src="https://seccdn.libravatar.org/avatar/be3d4c16125bae6aaad41af38ad989d5?d=mm&size=200" alt="">
+                
+
+                <span class="overlay"><i class="fa fa-home"></i></span>
+            </a>
+        </div>
+        <div class="titles">
+            <h3 class="title">
+                <a href="/">
+                    주니어 백엔드/DevOps의 우당탕탕 스토리
+                </a>
+            </h3>
+
+            
+                <span class="subtitle">Story of Jr. Backend/DevOps Developer.</span>
+            
+        </div>
+
+        <div class="languages">
+            
+                
+                    <a href="https://kangdroid.github.io/" class="active">ko</a>
+                
+            
+                
+                    <a href="https://kangdroid.github.io/en/">en</a>
+                
+            
+            </div>
+        
+
+        
+            <div class="toggler">
+        
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </div>
+    </div>
+</header>
+
+
+    <div class="main container">
+        
+    <div class="article-wrapper u-cf single">
+        
+            <a class="bubble" href="https://kangdroid.github.io/article/spring-study/1-spring-get-started/">
+    <i class="fas fa-fw fa-pencil-alt"></i>
+</a>
+
+<article class="default article">
+    
+
+    <div class="content">
+    <h1 class="article-title">
+        <a href="https://kangdroid.github.io/article/spring-study/1-spring-get-started/">
+            1. Spring 시작해 보기: Spring Initializr를 사용해서 첫 Spring Boot 프로젝트 생성하기.
+        </a>
+    </h1>
+
+    <div class="meta">
+        
+            
+                <span class="date moment">2023-01-13</span>
+            
+        
+
+        
+
+        
+            <span class="categories">
+                
+                    
+                    
+                        <a href="https://kangdroid.github.io/categories/spring-study/">spring-study</a>
+                    
+                
+            </span>
+        
+
+        
+    </div>
+
+    
+        
+
+        <h2 id="intro">Intro</h2>
+<p>이번 동아리에서 진행하는 Spring Study을 통해서 <a href="https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%9E%85%EB%AC%B8-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8">인프런 강의</a>를 듣고, 관련 내용을 정리합니다. <!-- raw HTML omitted --></p>
+<p>특히 해당 강의 내용은 Java Spring Boot을 기준으로 설명하지만, 적절히 현재 현업에서 사용중인 ASP.NET Core과 비교도 하면서, 관심이 많았던 Kotlin 언어를 적절히 적용해서 정리합니다.</p>
+<h2 id="이번-정리의-핵심">이번 정리의 핵심</h2>
+<ul>
+<li>Spring InitializR을 사용해서 기본적인 Spring Boot 프로젝트 생성하기.</li>
+<li>IntelliJ IDEA(Ultimate) + Spring InitializR를 사용해서 기본적인 Spring Boot 프로젝트 생성하기.</li>
+</ul>
+<h2 id="프로젝트-생성-시-공통-사항">프로젝트 생성 시 공통 사항.</h2>
+<ul>
+<li>Gradle은 Kotlin Gradle DSL 사용</li>
+<li>언어는 Kotlin!</li>
+<li>Spring Boot 버전은 3.0.1 버전 사용.</li>
+<li>Dependencies:
+<ul>
+<li>Spring Web</li>
+<li>Thymeleaf</li>
+</ul>
+</li>
+<li>나머지 메타 데이터는 적절히.</li>
+</ul>
+<h2 id="spring-initializr을-사용해서-기본적인-프로젝트-생성하기">Spring InitializR을 사용해서 기본적인 프로젝트 생성하기.</h2>
+<h3 id="전체적인-흐름">전체적인 흐름</h3>
+<ol>
+<li>start.spring.io 접속</li>
+<li><code>프로젝트 생성 시 공통 사항</code>을 참고해서 프로젝트 설정</li>
+<li>프로젝트 생성 &amp; 다운로드</li>
+<li>IntelliJ IDEA로 프로젝트 열고, 간단하게 실행.</li>
+</ol>
+<h3 id="1-startspringio-접속">1. start.spring.io 접속</h3>
+<p>start.spring.io에 접속하면 기본적으로 아래와 같은 페이지가 뜨고 있습니다.
+<img src="/resources/spring-study/1_get_started/spring_init.png" alt=""></p>
+<h3 id="2-프로젝트-기본-설정">2. 프로젝트 기본 설정</h3>
+<p>아래 사진과, 공통 사항 부분을 참고해서 프로젝트 설정을 진행합니다.
+<img src="/resources/spring-study/1_get_started/spring_init_two.png" alt=""></p>
+<h3 id="3-프로젝트-생성--다운로드generate">3. 프로젝트 생성 &amp; 다운로드(Generate)</h3>
+<p>start.spring.io 홈페이지에서 프로젝트 설정을 해 주고, 하단의 <code>Generate</code> 버튼을 클릭해서 프로젝트를 생성하고, 다운로드 합니다. 다운로드 후에 압축을 풀면, 아래 스크린샷과 같은 구조가 있을 겁니다.
+<img src="/resources/spring-study/1_get_started/project_structure.png" alt=""></p>
+<h3 id="4-intellij-idea로-프로젝트-열기">4. IntelliJ IDEA로 프로젝트 열기.</h3>
+<p>IntellIJ IDEA를 실행하면 아래와 같은 창이 뜨는데, Open을 클릭해서 다운받고 압축 푼 프로젝트를 열어 줍니다. 열고 나면 아래와 같이 프로젝트가 IDE로 열리고, 몇가지 기본 작업들을 실행하고 있을 것입니다.
+<img src="/resources/spring-study/1_get_started/intellij_idea_open.png" alt=""></p>
+<h3 id="5-프로젝트-실행하기">5. 프로젝트 실행하기.</h3>
+<p>(현재 글 작성자 본인은 Jetbrain Rider에서도 NewUI를 쓰고 있으며, 현재 IntelliJ IDEA에서도 New UI를 쓰고 있습니다.)</p>
+<p>우측 상단에 &ldquo;플레이&rdquo; 버튼을 누르면 프로젝트가 빌드 &amp; 실행 됩니다. 아래 스크린샷은 프로젝트를 실행했을 때의 모습입니다.
+<img src="/resources/spring-study/1_get_started/project_run.png" alt=""></p>
+<h2 id="intellij-idea를-이용해서-프로젝트-생성">IntelliJ IDEA를 이용해서 프로젝트 생성</h2>
+<p>IntelliJ IDEA 자체적으로 start.spring.io의 API를 사용해서 프로젝트를 만들 수도 있습니다. 이 섹션에서는 start.spring.io 접속 없이 IntelliJ IDEA로만으로 프로젝트를 설정하는 방법을 정리합니다.</p>
+<h3 id="전체적인-흐름-1">전체적인 흐름</h3>
+<ol>
+<li>IntelliJ IDEA에서 <code>New Project</code>실행</li>
+<li>Generator 측에서 <code>Spring Initializr</code> 선택 &amp; 프로젝트 기본 설정</li>
+<li>Dependencies 정의</li>
+<li>프로젝트 실행</li>
+</ol>
+<h3 id="1-intellij-idea에서-new-project실행">1. IntelliJ IDEA에서 <code>New Project</code>실행</h3>
+<p>New Project을 실행하면 다음과 같은 화면이 나옵니다.
+<img src="/resources/spring-study/1_get_started/new_project_before.png" alt=""></p>
+<h3 id="2-generator-측에서-spring-initializr-선택--프로젝트-기본-설정">2. Generator 측에서 <code>Spring Initializr</code> 선택 &amp; 프로젝트 기본 설정</h3>
+<p><code>Spring Initializr</code>은 왼쪽 사이드바에서 확인할 수 있습니다. 공통 프로젝트 설정처럼 언어 등을 설정합니다.
+<img src="/resources/spring-study/1_get_started/project_settings.png" alt=""></p>
+<h3 id="3-dependencies-정의">3. Dependencies 정의</h3>
+<p>다음으로 넘어가면 아래 사진처럼 Dependencies를 설정할 수 있습니다. 설정 후, Create 버튼을 눌러 프로젝트를 설정 &amp; 열어 주세요.
+<img src="/resources/spring-study/1_get_started/project_settings.png" alt=""></p>
+<h3 id="4-프로젝트-실행">4. 프로젝트 실행</h3>
+<p>프로젝트 실행은 Spring Initializr을 사용했을 때와 다를 바 없습니다!(아래 사진 참고)
+<img src="/resources/spring-study/1_get_started/run_project_init.png" alt=""></p>
+
+    
+</div>
+
+    
+<div class="footer">
+
+
+    
+        <div class="tags">
+            <i class="fa fa-tags"></i>
+            <div class="links">
+                
+                    
+                    
+                    <a href="https://kangdroid.github.io/tags/spring/">spring</a>
+                    
+                
+                    
+                    
+                    <a href="https://kangdroid.github.io/tags/study/">study</a>
+                    
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+</article>
+
+        
+    </div>
+
+    
+        <div id="comments-container">
+            
+            
+
+            
+
+            
+
+        </div>
+    
+
+    </div>
+
+    
+<footer>
+    <div class="container">
+
+        
+        <div class="recent-posts">
+            <strong>최근 글</strong>
+            <ul>
+                
+                
+                    <li>
+                        <a href="https://kangdroid.github.io/article/spring-study/1-spring-get-started/">1. Spring 시작해 보기: Spring Initializr를 사용해서 첫 Spring Boot 프로젝트 생성하기.</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://kangdroid.github.io/article/kubernetes-cluster-on-different-network/1-project-start/">1. 여러 네트워크에 있는 노드를 연결해서 Kubernetes(K3S) 클러스터 구축하기 - 소개편</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://kangdroid.github.io/article/mongodb-apac-2022/1-mongodb-data-platform/">Mongodb Apac 2022 - MongoDB Developer Data Platform</a>
+                    </li>
+                
+            </ul>
+        </div>
+        
+
+        
+        <div class="categories">
+            <a href="/categories/"><strong>카테고리</strong></a>
+            <ul>
+                
+                <li>
+                    <a href="/categories/conference">Conference
+                        (1)</a>
+                </li>
+                
+                <li>
+                    <a href="/categories/k3s-cluster-accross-multiple-network">K3s cluster accross multiple network
+                        (1)</a>
+                </li>
+                
+                <li>
+                    <a href="/categories/mongodb-apac-2022-seoul">Mongodb apac 2022 seoul
+                        (1)</a>
+                </li>
+                
+                <li>
+                    <a href="/categories/spring-study">Spring study
+                        (1)</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+
+        <div class="right">
+            
+            <div class="external-profiles">
+                <strong>소셜 미디어</strong>
+
+                
+                <a href="https://twitter.com/kanghw0720" target="_blank"><i class="fab fa-twitter"></i></a>
+                
+                <a href="https://github.com/KangDroid" target="_blank"><i class="fab fa-github"></i></a>
+                
+            </div>
+            
+
+            <div class="languages">
+                <strong>다국어</strong>
+                
+                
+                <a href="https://kangdroid.github.io/" class="active">ko</a>
+                
+                
+                
+                <a href="https://kangdroid.github.io/en/">en</a>
+                
+                
+            </div>
+            
+
+            
+        </div>
+    </div>
+</footer>
+
+
+<div class="credits">
+    <div class="container">
+        <div class="copyright">
+            <a href="https://github.com/KangDroid" target="_blank">
+                &copy;
+                
+                2023
+                
+                by Jason HyunWoo Kang(KangDroid)
+            </a>
+            
+        </div>
+        <div class="author">
+            <a href="https://github.com/Lednerb/bilberry-hugo-theme"
+                target="_blank">Bilberry Hugo Theme</a>
+        </div>
+    </div>
+</div>
+
+
+    
+
+    
+
+
+    <script src="https://kangdroid.github.io/theme.js"></script>
+
+    
+    
+    
+
+    
+</body>
+
+</html>

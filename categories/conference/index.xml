@@ -5,11 +5,7 @@
     <link>https://kangdroid.github.io/categories/conference/</link>
     <description>Recent content in conference on 주니어 백엔드/DevOps의 우당탕탕 스토리</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 20 Oct 2022 00:00:00 +0900</lastBuildDate>
-    
-	<atom:link href="https://kangdroid.github.io/categories/conference/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 20 Oct 2022 00:00:00 +0900</lastBuildDate><atom:link href="https://kangdroid.github.io/categories/conference/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mongodb Apac 2022 - MongoDB Developer Data Platform</title>
       <link>https://kangdroid.github.io/article/mongodb-apac-2022/1-mongodb-data-platform/</link>
